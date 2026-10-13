@@ -8,7 +8,7 @@
     <h1>Register</h1>
     <hr>
 
-    <form action="{{ route('auth.register') }}" method="post">
+    <form action="{{ route('auth.register.store') }}" method="post">
         @csrf 
         <p>Email <input type="text" name="email" value="{{ old('email') }}"></p>
         <p>Password <input type="password" name="password"></p>
