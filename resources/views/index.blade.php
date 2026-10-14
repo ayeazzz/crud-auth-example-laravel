@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CRUD Customer</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-    <a href="{{ route('customer.create') }}">Add New Customer</a> <table>
+    <p><a href="{{ route('dashboard.index') }}">Dashboard</a></p>
+    <a href="{{ route('customer.create') }}" class="btn btn-primary">Add New Customer</a> <table>
     <thead>
         <tr>
             <th>First Name</th>
@@ -20,10 +22,10 @@
             <td>{{ $row->first_name }}</td>
             <td>{{ $row->last_name }}</td>
             <td>
-                <a href="{{ route('customer.edit', $row->id) }}">Edit</a>
+                <a href="{{ route('customer.edit', $row->id) }}" class="btn btn-warning">Edit</a>
             </td>
             <td>
-                <a href="{{ route('customer.delete', $row->id) }}">Delete</a>
+                <a href="{{ route('customer.delete', $row->id) }}" class="btn btn-danger">Delete</a>
             </td>
         </tr>
             

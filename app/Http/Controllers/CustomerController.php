@@ -24,7 +24,7 @@ class CustomerController extends Controller
 
         $customer = ModelsCustomer::create($validatedData);
 
-        return redirect()->route('customer.index', $customer->id);
+        return redirect()->route('customer.index');
     }
 
     public function edit($id){
